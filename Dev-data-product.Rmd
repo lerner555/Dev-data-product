@@ -1,0 +1,31 @@
+---
+title: "Dev-data-product"
+author: "Amir"
+date: "6 5 2021"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## The data set
+
+This is the first rows of the data set
+
+```{r}
+head(mtcars)
+```
+
+## Plotly plot
+
+The mile per galan by weight
+
+```{r}
+library(plotly)
+library(ggplot2)
+p <- ggplot(data = mtcars, aes(x = wt, y = mpg)) +
+  geom_point( size = 2)
+ggplotly(p)
+```
